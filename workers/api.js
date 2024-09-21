@@ -7060,6 +7060,7 @@ When making API calls remember that requests against the same account are queued
                     account: accountIdSchema.required(),
                     user: Joi.string().max(256).required().example('user@example.com').description('Username'),
                     accessToken: Joi.string().max(256).required().example('aGVsbG8gd29ybGQ=').description('Access Token'),
+                    refreshToken: Joi.string().max(256).required().example('aGVsbG8gd29ybGQ=').description('Refresh Token'),
                     provider: Joi.string().max(256).example('gmail').description('OAuth2 provider')
                 }).label('AccountTokenResponse'),
                 failAction: 'log'
